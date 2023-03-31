@@ -1,8 +1,13 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+
+        ArrayList<Ingredient> salad = new ArrayList<Ingredient>();
+        Onion onion = new Onion("Onion",100, 0.4);
+
 
         Scanner scanner = new Scanner(System.in);
 
@@ -10,23 +15,24 @@ public class Main {
         int i = scanner.nextInt();
         switch (i) {
             case (1):
-
+                salad.add(onion);
+                System.out.println("case 1");
                 break;
             case (2):
+                System.out.println("case 2");
                 break;
             default:
+                System.out.println("default");
                 break;
         }
 
+        System.out.println(salad.size() + " " + salad.get(0).printInfoStr());
 
 
-
-
-        System.out.println("Enter your age");
+        System.out.println("Enter your weight");
         int weight = scanner.nextInt();
-        System.out.println(weight);
 
-        Onion onion = new Onion("Onion",weight, 0.4);
+
         onion.printInfo();
 
     }
