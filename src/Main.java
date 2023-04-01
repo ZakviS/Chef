@@ -63,7 +63,7 @@ public class Main {
                                 break;
 
                             default:
-                                System.out.println("Salad create");
+                                System.out.println("Salad create\n2");
                                 break;
                         }
                     } while (par !=4);
@@ -86,15 +86,6 @@ public class Main {
                     break;
             }
         } while (choice !=5);
-
-
-
-
-
-
-
-
-
 
     }
 }

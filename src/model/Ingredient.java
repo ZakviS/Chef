@@ -36,13 +36,10 @@ public abstract class Ingredient {
         this.weight = weight;
     }
 
-    public void printInfo(){
-        //System.out.println("Name: " + name + ", calories: " + Math.round(Calories) + " " + Calories + ", weight: " + weight + "g.");
-        System.out.printf("Name: %s, calories: %.1f, weight: %d",name, Calories, weight);
-    }
+
 
     public String printInfoStr(){
-        String result = String.format("Name: %s, calories: %.1f, weight: %d",name, Calories, weight);
+        String result = String.format("Name: %s, calories: %.1f, weight: %d \n",name, Calories, weight);
         return result;
     }
 }

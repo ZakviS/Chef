@@ -75,7 +75,8 @@ public class saladController {
                 index = i;
             }
         }
-        System.out.println("Max weight " + max + ", and it`s " + salad.get(index).getName() );
+
+        System.out.printf("Max weight %d, that's a %s \n\n",max, salad.get(index).getName());
     }
 
     public void maxCalories(){
@@ -87,7 +88,8 @@ public class saladController {
                 index = i;
             }
         }
-        System.out.println("Max calories " + max + ", and it`s " + salad.get(index).getName() );
+        System.out.printf("Maximum number of calories %.1f, that's a %s \n\n",max, salad.get(index).getName());
+
     }
 
 }
