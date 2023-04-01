@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Ingredient {
 
     public String name;
@@ -22,7 +24,7 @@ public abstract class Ingredient {
         return Calories;
     }
 
-    public void setCalories(int calories) {
+    public void setCalories(double calories) {
         Calories = calories;
     }
 
