@@ -37,11 +37,4 @@ public class ValidInsert {
         return id;
     }
 
-    public boolean isNull(ArrayList<Ingredient> list){
-        salad = list;
-        if (salad.size()==0){
-            return true;
-        }else return false;
-
-    }
 }
