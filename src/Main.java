@@ -4,6 +4,7 @@ import controller.VgSaladController;
 import controller.saladController;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +31,7 @@ public class Main {
                 case (1):
 
                     do {
-                        System.out.println("\nEnter choice:\n1)Crate salad\n2)Max calories\n3)Max weight\n4)Info of salad\n5)Exit\n");
+                        System.out.println("\nEnter choice:\n1)Crate salad\n2)Max calories\n3)Max weight\n4)Info of salad\n5)Sort by name\n6)Sort by weight\n7)Sort by calories\n8)Exit\n");
                         while (!scanner.hasNextInt()) {
                             System.out.println("That's not a number!");
                             scanner.next(); // this is important!
@@ -41,7 +42,7 @@ public class Main {
                             case (1):
                                 int par;
                                 do {
-                                    System.out.println("\nEnter choice:\n1)Add onion\n2)Add cucumber\n3)Add tomato\n4)Exit\n");
+                                    System.out.println("\nEnter choice:\n1)Add onion\n2)Add cucumber\n3)Add tomato\n4)Random salad\n5)Exit\n");
 
                                     while (!scanner.hasNextInt()) {
                                         System.out.println("That's not a number!");
@@ -90,15 +91,26 @@ public class Main {
                                             vsc.addTomato(weight);
 
                                             break;
+                                        case (4):
+                                            Random random = new Random();
+
+                                            weight = random.nextInt(200);
+                                            vsc.addOnion(weight);
+
+                                            weight = random.nextInt(200);
+                                            vsc.addCucumber(weight);
+
+                                            weight = random.nextInt(200);
+                                            vsc.addTomato(weight);
 
                                         default:
-                                            if (par > 4 ){
+                                            if (par > 5 ){
                                                 System.out.println("Incorrect choice");
                                             }
                                             else System.out.println("Salad create");
                                             break;
                                     }
-                                } while (par !=4);
+                                } while (par !=5);
 
                                 break;
 
@@ -113,19 +125,28 @@ public class Main {
                             case (4):
                                 vsc.printInfo(vsc.getSalad());
                                 break;
+                            case (5):
+                                vsc.sortByName(vsc.getSalad());
+                                break;
+                            case (6):
+                                vsc.sortByWeight(vsc.getSalad());
+                                break;
+                            case (7):
+                                vsc.sortByCalories(vsc.getSalad());
+                                break;
                             default:
-                                if (choice > 5 ){
+                                if (choice > 8 ){
                                     System.out.println("Incorrect choice");
                                 }
                                 break;
                         }
-                    } while (choice !=5);
+                    } while (choice !=8);
                     break;
 
                 case (2):
 
                     do {
-                        System.out.println("\nEnter choice:\n1)Crate salad\n2)Max calories\n3)Max weight\n4)Info of salad\n5)Exit\n");
+                        System.out.println("\nEnter choice:\n1)Crate salad\n2)Max calories\n3)Max weight\n4)Info of salad\n5)Sort by name\n6)Sort by weight\n7)Sort by calories\n8)Exit\n");
 
                         while (!scanner.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -227,13 +248,22 @@ public class Main {
                             case (4):
                                 msc.printInfo(msc.getSalad());
                                 break;
+                            case (5):
+                                msc.sortByName(msc.getSalad());
+                                break;
+                            case (6):
+                                msc.sortByWeight(msc.getSalad());
+                                break;
+                            case (7):
+                                msc.sortByCalories(msc.getSalad());
+                                break;
                             default:
-                                if (choice > 5 ){
+                                if (choice > 8 ){
                                     System.out.println("Incorrect choice");
                                 }
                                 break;
                         }
-                    } while (choice !=5);
+                    } while (choice !=8);
                     break;
 
                 default:

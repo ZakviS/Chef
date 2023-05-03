@@ -3,6 +3,8 @@ package controller;
 import model.Ingredient;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public abstract class saladController {
 
@@ -42,5 +44,20 @@ public abstract class saladController {
         System.out.printf("Maximum number of calories %.1f, that's a %s \n\n",max, salad.get(index).getName());
 
     }
+
+    public void sortByName(ArrayList<Ingredient> salad){
+        salad.sort(Comparator.comparing(Ingredient::getName));
+        System.out.println(salad);
+    }
+    public void sortByWeight(ArrayList<Ingredient> salad){
+        salad.sort(Comparator.comparing(Ingredient::getWeight));
+        System.out.println(salad);
+    }
+    public void sortByCalories(ArrayList<Ingredient> salad){
+        salad.sort(Comparator.comparing(Ingredient::getCalories));
+        System.out.println(salad);
+
+    }
+
 
 }

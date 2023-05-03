@@ -45,9 +45,10 @@ public abstract class Ingredient {
 
     @Override
     public String toString(){
-        String result = String.format("Name: %s, calories: %.1f, weight: %d ",name, Calories, weight);
+        String result = String.format("\nName: %s, calories: %.1f, weight: %d ",name, Calories, weight);
         return result;
     }
+
     public String countIngredient(){
         String result = String.format("\nNumber of ingredient: %d ", id);
         return result;
