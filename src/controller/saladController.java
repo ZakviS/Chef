@@ -8,10 +8,17 @@ import model.Tomato;
 import java.util.ArrayList;
 
 public class saladController {
+    public ArrayList<Ingredient> getSalad() {
+        return salad;
+    }
 
     ValidInsert vi = new ValidInsert();
     ArrayList<Ingredient> salad = new ArrayList<Ingredient>();
+    public saladController(){}
 
+    public saladController(saladController saladcon){
+        salad = saladcon.salad;
+    }
 
     public void addOnion(int weight){
 
@@ -25,8 +32,6 @@ public class saladController {
             salad.add(onion);
         }
 
-
-
     }
 
     public void addCucumber(int weight){
@@ -37,8 +42,8 @@ public class saladController {
             double call = weight * 0.16;
             salad.get(vi.searchId(salad,"Cucumber")).setCalories(salad.get(vi.searchId(salad,"Cucumber")).getCalories() + call);
         }else {
-            Onion onion = new Onion("Cucumber", weight, 0.4);
-            salad.add(onion);
+            Cucumber cucumber = new Cucumber("Cucumber", weight, 0.4);
+            salad.add(cucumber);
         }
 
 
@@ -52,8 +57,8 @@ public class saladController {
             double call = weight * 0.16;
             salad.get(vi.searchId(salad,"Tomato")).setCalories(salad.get(vi.searchId(salad,"Tomato")).getCalories() + call);
         }else {
-            Onion onion = new Onion("Tomato", weight, 0.2);
-            salad.add(onion);
+            Tomato tomato = new Tomato("Tomato", weight, 0.2);
+            salad.add(tomato);
         }
 
 
@@ -62,8 +67,10 @@ public class saladController {
     public void printInfo(){
         System.out.println("Ingredient of salad");
         for (int i = 0; i < salad.size();i++){
-            System.out.println(salad.get(i).printInfoStr());
+            System.out.println(salad.get(i).toString());
+            System.out.println(salad.get(i).countIngredient());
         }
+        salad.get(1).countIngredient();
     }
 
     public void maxWeight(){

@@ -2,14 +2,20 @@ package model;
 
 public abstract class Ingredient {
 
-    public String name;
-    public double Calories;
-    public int weight;
+    private String name;
+    private double Calories;
+    private int weight;
+    static int id;
 
-    public Ingredient(String name, int weight,double k) {
+    public static int getId() {
+        return id;
+    }
+
+    public Ingredient(String name, int weight, double k) {
         this.name = name;
         this.weight = weight;
         Calories = weight * k;
+        id ++;
     }
 
     public String getName() {
@@ -37,9 +43,13 @@ public abstract class Ingredient {
     }
 
 
-
-    public String printInfoStr(){
-        String result = String.format("Name: %s, calories: %.1f, weight: %d \n",name, Calories, weight);
+    @Override
+    public String toString(){
+        String result = String.format("Name: %s, calories: %.1f, weight: %d ",name, Calories, weight);
+        return result;
+    }
+    public String countIngredient(){
+        String result = String.format("\nNumber of ingredient: %d ", id);
         return result;
     }
 }
