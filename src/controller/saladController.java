@@ -42,7 +42,6 @@ public abstract class saladController {
             }
         }
         System.out.printf("Maximum number of calories %.1f, that's a %s \n\n",max, salad.get(index).getName());
-
     }
 
     public void sortByName(ArrayList<Ingredient> salad){
@@ -59,5 +58,29 @@ public abstract class saladController {
 
     }
 
+    public double mc(ArrayList<Ingredient> salad){
+        double max = 0;
+        int index = 0;
+        for (int i = 0; i < salad.size(); i++){
+            if (salad.get(i).getCalories() >= max ) {
+                max = salad.get(i).getCalories();
+                index = i;
+            }
+        }
+        return max;
+    }
 
+
+    public int mw(ArrayList<Ingredient> salad){
+        int max = 0;
+        int index = 0;
+        for (int i = 0; i < salad.size(); i++){
+            if (salad.get(i).getWeight() >= max ) {
+                max = salad.get(i).getWeight();
+                index = i;
+            }
+        }
+
+        return max;
+    }
 }

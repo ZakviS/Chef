@@ -49,8 +49,4 @@ public abstract class Ingredient {
         return result;
     }
 
-    public String countIngredient(){
-        String result = String.format("\nNumber of ingredient: %d ", id);
-        return result;
-    }
 }
