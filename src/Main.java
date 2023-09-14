@@ -26,6 +26,8 @@ public class Main {
             }
             choice = scanner.nextInt();
 
+            try {
+
 
             switch (choice) {
                 case (1):
@@ -272,6 +274,12 @@ public class Main {
                     }
                     break;
             }
+            } catch (
+                    Exception e
+            ){
+                System.out.println(e.getMessage());
+            }
+
         } while (choice !=3);
 
     }

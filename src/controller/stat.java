@@ -3,9 +3,10 @@ package controller;
 import model.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class stat {
-    static void AddOnion(int weight, ValidInsert vi, ArrayList<Ingredient> salad) {
+    static void AddOnion(int weight, ValidInsert vi, List<Ingredient> salad) {
         if (vi.searchName(salad,"Onion")){
             salad.get(vi.searchId(salad,"Onion")).setWeight(salad.get(vi.searchId(salad,"Onion")).getWeight() + weight);
             double call = weight *0.4;
@@ -16,7 +17,7 @@ public class stat {
         }
     }
 
-    static void AddCucumber(int weight, ValidInsert vi, ArrayList<Ingredient> salad) {
+    static void AddCucumber(int weight, ValidInsert vi, List<Ingredient> salad) {
         if (vi.searchName(salad,"Cucumber")){
             salad.get(vi.searchId(salad,"Cucumber")).setWeight(salad.get(vi.searchId(salad,"Cucumber")).getWeight() + weight);
             double call = weight * 0.16;
@@ -27,7 +28,7 @@ public class stat {
         }
     }
 
-    static void AddTomato(int weight, ValidInsert vi, ArrayList<Ingredient> salad) {
+    static void AddTomato(int weight, ValidInsert vi, List<Ingredient> salad) {
         if (vi.searchName(salad,"Tomato")){
             salad.get(vi.searchId(salad,"Tomato")).setWeight(salad.get(vi.searchId(salad,"Tomato")).getWeight() + weight);
             double call = weight * 0.2;
@@ -38,7 +39,7 @@ public class stat {
         }
     }
 
-    static void AddChicken(int weight, ValidInsert vi, ArrayList<Ingredient> salad) {
+    static void AddChicken(int weight, ValidInsert vi, List<Ingredient> salad) {
         if (vi.searchName(salad,"Chicken")){
             salad.get(vi.searchId(salad,"Chicken")).setWeight(salad.get(vi.searchId(salad,"Chicken")).getWeight() + weight);
             double call = weight * 1.17;
@@ -49,7 +50,7 @@ public class stat {
         }
     }
 
-    static void AddTurkey(int weight, ValidInsert vi, ArrayList<Ingredient> salad) {
+    static void AddTurkey(int weight, ValidInsert vi, List<Ingredient> salad) {
         if (vi.searchName(salad,"Turkey")){
             salad.get(vi.searchId(salad,"Turkey")).setWeight(salad.get(vi.searchId(salad,"Turkey")).getWeight() + weight);
             double call = weight * 1.35;

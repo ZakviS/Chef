@@ -5,14 +5,15 @@ import model.Ingredient;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static controller.stat.*;
 
 public class VgSaladController extends saladController{
     ValidInsert vi = new ValidInsert();
-    ArrayList<Ingredient> salad = new ArrayList<Ingredient>();
+    List<Ingredient> salad = new ArrayList<Ingredient>();
 
-    public ArrayList<Ingredient> getSalad() {
+    public List<Ingredient> getSalad() {
         return salad;
     }
 

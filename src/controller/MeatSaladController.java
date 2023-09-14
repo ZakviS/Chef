@@ -6,14 +6,15 @@ import model.Onion;
 import model.Tomato;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static controller.stat.*;
 
 public class MeatSaladController extends saladController{
     ValidInsert vi = new ValidInsert();
-    ArrayList<Ingredient> salad = new ArrayList<Ingredient>();
+    List<Ingredient> salad = new ArrayList<Ingredient>();
 
-    public ArrayList<Ingredient> getSalad() {
+    public List<Ingredient> getSalad() {
         return salad;
     }
 

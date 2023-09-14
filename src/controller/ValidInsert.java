@@ -3,10 +3,11 @@ package controller;
 import model.Ingredient;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ValidInsert {
 
-    ArrayList<Ingredient> salad;
+    List<Ingredient> salad;
 
     public boolean ValidWeight(int weight){
         if (weight <= 0) return true;
@@ -14,7 +15,7 @@ public class ValidInsert {
     }
 
 
-    public <T> boolean searchName(ArrayList<Ingredient> list, String ing){
+    public <T> boolean searchName(List<Ingredient> list, String ing){
         salad = list;
 
         boolean ans = false;
@@ -26,7 +27,7 @@ public class ValidInsert {
         return ans;
     }
 
-    public <T> int searchId (ArrayList<Ingredient> list, String ing){
+    public <T> int searchId (List<Ingredient> list, String ing){
         salad = list;
         int  id = 0;
         for (int i = 0; i < salad.size();i++){
