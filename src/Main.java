@@ -1,9 +1,10 @@
+import abc.summa.Sum;
 import controller.MeatSaladController;
 import controller.ValidInsert;
 import controller.VgSaladController;
-import controller.saladController;
+import zxc.lib.Counter;
 
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,6 +14,16 @@ public class Main {
         VgSaladController vsc = new VgSaladController();
         MeatSaladController msc = new MeatSaladController();
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> list= new ArrayList<>();
+        list.add(1);
+        list.add(8);
+
+        Counter counter = new Counter();
+        counter.counter(list);
+        Sum sum = new Sum();
+        sum.calc(1,3);
+        System.out.println(sum.result());
+
 
         System.out.println("Hello!");
 
@@ -126,6 +137,9 @@ public class Main {
 
                             case (4):
                                 vsc.printInfo(vsc.getSalad());
+
+                                System.out.println("вывод через библиотеку");
+                                counter.counter((ArrayList<?>) vsc.getSalad());
                                 break;
                             case (5):
                                 vsc.sortByName(vsc.getSalad());

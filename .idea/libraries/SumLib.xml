@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SumLib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SumLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
